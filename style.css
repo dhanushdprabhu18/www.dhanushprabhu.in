@@ -1,0 +1,196 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    color: #f5f5f5;
+    background-color: #111;
+    overflow-x: hidden;
+    font-size: 16px;
+    line-height: 1.5;
+    margin: 0;
+    padding: 0;
+    transition: all 0.3s ease;
+}
+
+#particles-js {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    opacity: 0.7;
+}
+
+.hero {
+    background: linear-gradient(135deg, #4c6ef5, #a5b4fc);
+    padding: 120px 20px;
+    text-align: center;
+    backdrop-filter: blur(5px);
+    animation: fadeIn 1.5s ease-out forwards;
+}
+
+.hero-content {
+    opacity: 0;
+    animation: fadeIn 2s ease-out forwards;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+    color: #fff;
+    text-transform: uppercase;
+    animation: slideUp 1s ease-out forwards;
+}
+
+.hero .download-btn {
+    padding: 15px 30px;
+    background-color: #21c40b;
+    border: none;
+    border-radius: 30px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #fff;
+    cursor: pointer;
+    transition: 0.3s ease;
+    opacity: 0;
+    animation: fadeIn 1.5s ease-out forwards 1s;
+}
+
+.hero .download-btn:hover {
+    background-color: #ffeb3b;
+}
+
+.section {
+    padding: 80px 40px;
+    text-align: center;
+    font-size: 1.2rem;
+    backdrop-filter: blur(5px);
+    border-radius: 20px;
+    box-shadow: 0 8px 30px rgba(32, 34, 24, 0.7);
+    color: #f9fcf9;
+    margin: 20px 0;
+    position: relative;
+    opacity: 0;
+    animation: fadeInUp 1.5s ease-out forwards;
+}
+
+.about h2, .education h2, .skills h2, .language h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #facc15;
+    animation: fadeIn 1s ease-out forwards;
+}
+
+.skills-list, .languages-list {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.skill-card, .language-card {
+    padding: 20px 40px;
+    border-radius: 100px;
+    width: 220px;
+    text-align: center;
+    font-size: 1.8rem;
+    color: #fff;
+    background-color: #4c6ef5;
+    transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+}
+
+.skill-card:hover, .language-card:hover {
+    transform: scale(1.1);
+    background-color: #b675b3;
+    box-shadow: 0 15px 30px rgba(32, 34, 24, 0.6);
+}
+
+.language-card {
+    background-color: #33eb33;
+}
+
+.footer {
+    text-align: center;
+    background-color: #111;
+    padding: 20px;
+    color: #f5f5f5;
+    font-size: 1rem;
+}
+
+.footer p {
+    margin: 0;
+}
+
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+@keyframes slideUp {
+    0% { transform: translateY(30px); opacity: 0; }
+    100% { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes fadeInUp {
+    0% { opacity: 0; transform: translateY(30px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 2rem;
+    }
+    .download-btn {
+        padding: 12px 25px;
+    }
+    .section {
+        padding: 60px 20px;
+    }
+    .skills-list, .languages-list {
+        flex-direction: column;
+        align-items: center;
+    }
+    .skill-card, .language-card {
+        width: 150px;
+        font-size: 1.5rem;
+    }
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 20px;
+}
+
+.social-icon {
+    font-size: 3rem;
+    color: #f5f5f5;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.social-icon:hover {
+    color: #ee35e5; 
+    transform: scale(1.1); 
+}
+
+
+.footer {
+    text-align: center;
+    background-color: #111;
+    padding: 40px 20px;
+    color: #f5f5f5;
+    font-size: 2rem;
+}
+
+.footer p {
+    margin: 0;
+    font-size: 3rem;
+}
